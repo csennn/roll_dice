@@ -1,0 +1,34 @@
+import java.util.Random; //random class imported
+import java.util.Scanner;
+
+public class LearningRandom {
+
+	public static void main(String[] args) {
+		try (Scanner scan = new Scanner(System.in)) {
+			Random r = new Random(); // created r object from random class
+
+			System.out.println("Rolling the Dice");
+
+			while (true) {
+				System.out.println();
+				System.out.println("1) Roll the dice");
+				System.out.println("2) Quit");
+
+				String entry = scan.next();
+				
+				if (entry.equals("1")) {
+					int dice1 = r.nextInt(6) + 1;
+					int dice2 = r.nextInt(6) + 1;
+					System.out.println("dice: " + dice1 + " - " + dice2);
+				} else {
+					System.out.println("Exited.");
+					break;
+				}
+
+			}
+      
+		}
+
+	}
+
+}
